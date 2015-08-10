@@ -1,0 +1,25 @@
+<div style="background-image:url(<%= image_path 'brick.jpg' %>)">
+</div>
+
+<div class="col-sm-8 col-sm-offset-2">
+	<h3>Welcome, <%= @user.first_name %>!</h3>
+</div>
+
+
+<!-- 
+<%= link_to "My Posts", posts_path %>
+
+<%= link_to "New Post", new_post_path %>
+
+<%= link_to "Log out", logout_path %>
+ -->
+
+
+<div class='post'>
+<% @post.each do |p| %>
+	<div class="col-sm-8 col-sm-offset-2">
+		<h3><%= p.title %> </h3>
+		<h7><%= p.content %> </h7>
+	</div>
+<% end %>
+</div>
